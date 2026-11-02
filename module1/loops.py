@@ -6,7 +6,7 @@ kids = ["Violet", "Dash", "Jack-Jack"]
 for kid in kids:
     print(name, "hugs", kid)
 
-for number in range(5, 0, -1):
+for number in [5, 4, 3, 2, 1]:
     print(number)
     time.sleep(0.5)
 print("Blast off!")
