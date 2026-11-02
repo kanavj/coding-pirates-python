@@ -4,7 +4,7 @@ married = True
 kids = ["Violet", "Dash", "Jack-Jack"]
 villain_nearby = True
 
-if villain_nearby:
+if villain_nearby == True:
     print(name, "stretches into action!")
 else:
     print(name, "relaxes at home.")
@@ -14,7 +14,7 @@ if age > 30:
 else:
     print(name, "is 30 or younger.")
 
-if married:
+if married == True:
     print(name, "is married.")
 
 if len(kids) == 0:
