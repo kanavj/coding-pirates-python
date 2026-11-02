@@ -49,16 +49,9 @@ You should now see the `module1` folder in the left sidebar of VS Code.
 
 ## Check that everything works
 
-Make sure the project folder is open in VS Code (see above), then open a terminal (**Terminal → New Terminal**) and type:
+Make sure the project folder is open in VS Code (see above), and the python extension is installed. Then click on the play button in the top right.
 
-```
-cd module1
-python3 1-hello.py
-```
-
-On Windows, use `python` instead of `python3`.
-
-You should see `Hello!` followed by some information about a superhero. 🎉
+You should see `Hello!` followed by some information about a superhero in the bottom of the screen. 🎉
 
 ## Troubleshooting
 
@@ -66,4 +59,3 @@ You should see `Hello!` followed by some information about a superhero. 🎉
 |---|---|
 | Windows: `python` opens the Microsoft Store or says "not recognized" | Reinstall Python and make sure **Add python.exe to PATH** is ticked. Then restart VS Code. |
 | Mac: a popup asks to install "command line developer tools" | Python from python.org isn't installed yet. Close the popup and follow the Mac steps above. |
-| `No such file or directory` | The terminal is in the wrong folder. Make sure you opened the project folder and ran `cd module1`. |
