@@ -1,8 +1,9 @@
-import time
+import time  # gives us time.sleep() to pause the game
 
+# Your starting stats. TRY: give yourself more hearts!
 hearts = 3
 gold = 0
-inventory = ["half a sandwich"]
+inventory = ["half a sandwich"]  # a list of the things you carry
 
 print("🏴‍☠️ Ahoy! Welcome aboard, matey!")
 time.sleep(1)
@@ -13,11 +14,12 @@ print("CRASH! Your ship smashes into SNAKE ISLAND. Oops.")
 time.sleep(2)
 
 # 🏖️ THE BEACH
-print()
-print("-" * 32)
+print()  # an empty print() makes an empty line
+print("-" * 32)  # "-" * 32 prints 32 dashes
 print("🏖️  THE BEACH")
 print("The sand is warm. A crab is staring at you. Very rudely.")
 print()
+# Show your stats. "❤️ " * hearts prints one heart for each heart you have
 print("Hearts:", "❤️ " * hearts)
 print("Gold:", gold)
 print("Inventory:", inventory)
@@ -26,20 +28,21 @@ print("2) Chase the crab")
 print("3) Take a nap")
 choice = input("> ")
 
+# input() gives text, so we check for "1" in quotes, not the number 1
 if choice == "1":
     print("You dig and dig... and find a KAZOO! 🎺")
-    inventory.append("kazoo")
+    inventory.append("kazoo")  # append() adds something to the end of a list
 elif choice == "2":
     print("The crab pinches your bum! OUCH! 🦀")
     print("But it drops 5 gold coins while running away.")
-    hearts = hearts - 1
+    hearts = hearts - 1  # take the old number of hearts, subtract 1, and store it again
     print("💔 You lose a heart!")
     gold = gold + 5
 elif choice == "3":
     print("You nap for 6 hours and wake up red as a lobster. Sunburn! 🦞")
     hearts = hearts - 1
     print("💔 You lose a heart!")
-else:
+else:  # anything that isn't 1, 2 or 3 ends up here
     print(
         "That's not a choice! While you stand there confused, a seagull poops on you. 🐦"
     )
@@ -47,9 +50,10 @@ else:
     print("💔 You lose a heart!")
 time.sleep(2)
 
-if hearts <= 0:
+# After every room we check if you are out of hearts
+if hearts <= 0:  # <= means "smaller than or equal to"
     print("💀 You ran out of hearts! GAME OVER")
-    exit()
+    exit()  # exit() stops the program right here
 
 # 🌴 THE JUNGLE
 print()
@@ -68,7 +72,7 @@ choice = input("> ")
 if choice == "1":
     print("The monkey gobbles it up and burps in your face. 🐒")
     print("As a thank you, he gives you a RUBBER DUCK. 🦆")
-    inventory.remove("half a sandwich")
+    inventory.remove("half a sandwich")  # remove() takes something out of a list
     inventory.append("rubber duck")
 elif choice == "2":
     print("The monkey laughs so hard he falls out of the tree!")
@@ -103,8 +107,14 @@ print("3) Tell them a joke")
 choice = input("> ")
 
 if choice == "1":
+    # An if inside an if! "in" checks if something is in the list
     if "kazoo" in inventory:
-        print("You play the kazoo. 🎺 The snakes do a CONGA LINE! You dance across.")
+        print("You play the kazoo. 🎺 The snakes start a CONGA LINE!")
+        # The for loop runs once for every snake in the list
+        for snake in ["Sid", "Sally", "Steve", "Tiny Hat"]:
+            print("  🐍", snake, "joins the conga! 💃")
+            time.sleep(0.5)
+        print("You dance across safely.")
     else:
         print("You have no instrument, so you hum. Badly. A snake bites your toe!")
         hearts = hearts - 1
@@ -138,19 +148,21 @@ print("Gold:", gold)
 print("Inventory:", inventory)
 password = input("Password: ")
 
-if password == "hiss":
-    print("The door giggles and swings open. Behind it: 10 gold coins! 💰")
-    gold = gold + 10
-else:
+# The loop keeps asking until the password is right. != means "is NOT equal to"
+while password != "hiss":
     print("WRONG! The door sneezes slime all over you. 🤧")
-    print("It opens anyway, because it feels bad about the slime.")
     hearts = hearts - 1
     print("💔 You lose a heart!")
-time.sleep(2)
+    if hearts <= 0:
+        print("💀 You ran out of hearts! GAME OVER")
+        exit()
+    print("Psst... it starts with an h and ends with ss.")
+    print("Hearts:", "❤️ " * hearts)
+    password = input("Password: ")
 
-if hearts <= 0:
-    print("💀 You ran out of hearts! GAME OVER")
-    exit()
+print("The door giggles and swings open. Behind it: 10 gold coins! 💰")
+gold = gold + 10
+time.sleep(2)
 
 # 👑 MONTY'S LAIR
 print()
@@ -159,6 +171,7 @@ print("👑 MONTY'S LAIR")
 print("A GIANT python in pyjamas wakes up. 'WHO DARES WAKE THE MIGHTY MONTY?!'")
 time.sleep(2)
 
+# No choice here: the duck only helps if you picked it up in the jungle
 if "rubber duck" in inventory:
     print("Monty sees your rubber duck. 'Is that... a BATH DUCKY?!' 🦆")
     print("He trades it for 20 gold coins and hugs it tightly.")
@@ -208,6 +221,7 @@ print("Hearts:", "❤️ " * hearts)
 print("Gold:", gold)
 print("Inventory:", inventory)
 
+# Your rank depends on your gold. The biggest number is checked first
 if gold >= 70:
     print("You are a LEGENDARY pirate! 🏴‍☠️")
 elif gold >= 30:

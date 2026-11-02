@@ -53,7 +53,7 @@ Make sure the project folder is open in VS Code (see above), then open a termina
 
 ```
 cd module1
-python3 hello.py
+python3 1-hello.py
 ```
 
 On Windows, use `python` instead of `python3`.
