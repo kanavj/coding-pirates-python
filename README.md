@@ -11,28 +11,17 @@ Code for the Coding Pirates Python module.
 
 ## Install Python
 
-### Windows
-1. Go to [python.org/downloads](https://www.python.org/downloads/) and click **Download Python**.
-2. Open the installer.
-3. ⚠️ **Tick "Add python.exe to PATH"** at the bottom of the first screen.
-4. Click **Install Now**.
-5. Open a terminal (search for **PowerShell**) and check that it works:
-   ```
-   python --version
-   ```
+Any **Python 3.10 or newer** works. Use the official Python from [python.org](https://www.python.org/downloads/) (or the Microsoft Store on Windows). You don't need Anaconda.
 
-### Mac
-1. Go to [python.org/downloads](https://www.python.org/downloads/) and click **Download Python**.
-2. Open the `.pkg` file and click through the installer.
-3. Open **Terminal** and check that it works:
-   ```
-   python3 --version
-   ```
+> **Already have Python?** Open a terminal and type `python --version` (Windows) or `python3 --version` (Mac). If it says 3.10 or higher, skip to [VS Code](#vs-code).
+
+- **Windows:** follow Microsoft's guide [Python on Windows for beginners](https://learn.microsoft.com/windows/python/beginners). The "Manual installation" tab is the easiest.
+- **Mac:** follow [How to Install Python Using the Official Installer on macOS](https://realpython.com/installing-python/#macos-how-to-install-python-using-the-official-installer) (2 short steps). There's no install manager on Mac, so Python won't update itself. That's fine for this course.
 
 ### VS Code
-1. Download and install VS Code from [code.visualstudio.com](https://code.visualstudio.com/), if it isn't installed already.
-2. Open VS Code and go to **Extensions** (the four squares on the left).
-3. Search for **Python** and install the one by Microsoft.
+1. Install [VS Code](https://code.visualstudio.com/), if it isn't installed already.
+2. Install the [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python) (search for **Python** by **Microsoft** under Extensions).
+3. **If there are several Python versions on the computer:** open a `.py` file, click the Python version in the bottom right corner of VS Code, and pick the newest one.
 
 ## Get the code
 
@@ -57,5 +46,7 @@ You should see `Hello!` followed by some information about a superhero in the bo
 
 | Problem | Fix |
 |---|---|
-| Windows: `python` opens the Microsoft Store or says "not recognized" | Reinstall Python and make sure **Add python.exe to PATH** is ticked. Then restart VS Code. |
+| Windows: `python` opens the Microsoft Store or says "not recognized" | Check that the **Python install manager** is installed. Then click Start, open **Manage app execution aliases**, and make sure the **Python** aliases are turned on. Restart VS Code afterwards. |
+| Windows: `python` runs an old version | An older Python is also installed. Go to **Settings → Apps → Installed apps**, search for **Python**, and uninstall the old versions. |
+| VS Code runs the wrong Python version | Click the Python version in the bottom right corner of VS Code and pick the newest one. |
 | Mac: a popup asks to install "command line developer tools" | Python from python.org isn't installed yet. Close the popup and follow the Mac steps above. |
