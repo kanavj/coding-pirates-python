@@ -12,7 +12,8 @@ pirate = {
 }
 
 # TODO 2: Print the FIRST thing in the inventory.
-#         A list inside a dictionary! Hint: pirate["inventory"][0]
+#         It's a list inside a dictionary, so you need TWO pairs of
+#         square brackets. Which place is the first one in?
 
 
 # TODO 3: Finish the function so it prints EVERYTHING about a pirate
@@ -28,7 +29,8 @@ show_pirate(pirate)
 
 # TODO 4: Write a function find_treasure(p, amount) that adds
 #         amount to the pirate's gold. Call it, then show the pirate again.
-#         Hint: p["gold"] = p["gold"] + amount
+#         Hint: remember changing a price in the shop, like shop["map"] = 20?
+#         The pirate's gold works the same way, but you ADD to what's already there.
 
 
 # TODO 5: Write a function pick_up(p, item) that puts an item in the inventory.

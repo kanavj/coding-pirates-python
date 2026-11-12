@@ -49,10 +49,11 @@ def roll_dice():
     return ___
 
 
-# TODO 7: Switch on the next two lines: remove the # at the start of each one.
-#         (Remember the comment trap from Python Says? Lines with # don't run.)
-# roll = roll_dice()
-# print("🎲 You rolled", roll)
+# TODO 7: Roll the dice! Call roll_dice(), catch the answer in a variable
+#         called roll, and print it, like:  🎲 You rolled 4
+#         Remember loot = double(10) on the slide? Same trick.
+#         No blank this time: write both lines yourself!
+
 
 # TODO 8: If the roll is 6, print "CRITICAL HIT!" (or your own celebration)
 #         Tip: to test it without waiting for a 6, change the return line

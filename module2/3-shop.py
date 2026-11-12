@@ -6,6 +6,7 @@
 # ---------- Step 1: stock your shop ----------
 # TODO 1: Stock your shop! At least 4 items, and YOU invent the prices.
 #         Parrots? Cursed socks? A map to the toilet? You decide.
+#         Make at least one item cost MORE than 50 gold: the customer only has 50!
 shop = {
     "parrot": 30,
     "___": ___,
@@ -40,13 +41,12 @@ choice = input("What do you want to buy? ")
 if choice in ___:
     price = shop[___]
     print("That costs", price, "gold.")
-    # TODO 7: Enough gold? Take the gold and say thank you.
+    # TODO 7: Enough gold? Take the price away from the gold and say thank you.
     #         Not enough? Your shopkeeper says something grumpy 😤
-    if gold >= price:
-        gold = gold - price
-        print("___")
-    else:
-        print("___")
+    #         No blanks this time: write the if and the else yourself!
+    #         Hint: start with   if gold >= price:
+    #         Careful: your lines go INSIDE this block, so start them with 4 spaces.
+
 else:
     print("We don't sell that here!")  # TODO 8: make this message funnier
 
